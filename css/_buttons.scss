@@ -1,0 +1,51 @@
+@import '_vars.scss';
+a {
+	color: $colorGold;
+	&:hover {
+		color: $colorGold;
+	}
+}
+.btn {
+	font: {
+		family: $fontHeading;
+		size: 18px;
+		weight: 600;
+	}
+	padding: 10.5px 21px;
+	border-radius: 60px;
+	box-sizing: content-box;
+	transition: all .2s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&::before {
+		content: '';
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+		background: darken($colorGold, 15%);
+		border-radius: 60px;
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: all .2s ease-in-out;
+	}
+	svg {
+		margin-left: 5px;
+	}
+	&.btn-primary {
+		background-color: $colorGold;
+		border-color: $colorGold;
+		color: $colorDarkSlateGray;
+		&:hover {
+			color: #fff;
+			border-color: darken($colorGold, 15%);
+			&::before {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+	}
+}

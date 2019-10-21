@@ -1,0 +1,47 @@
+@mixin section {
+	padding: 150px 0;
+	@include responsive(wide-screens) {
+		padding: 50px 0;
+	}
+}
+@mixin gradient($deg, $opacity) {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgb(0,0,0);
+	background: -moz-linear-gradient($deg, rgba(0,0,0,0) 0%, rgba(0,0,0,$opacity) 95%);
+	background: -webkit-linear-gradient($deg, rgba(0,0,0,0) 0%, rgba(0,0,0,$opacity) 95%);
+	background: linear-gradient($deg, rgba(0,0,0,0) 0%, rgba(0,0,0,$opacity) 95%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#1c2128",GradientType=1);
+	z-index: 1;
+}
+
+$width-small: 425px;
+$width-medium: 767px;
+$width-large: 991px;
+
+@mixin responsive($width) {
+	@if $width == wide-screens {
+		@media (max-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == medium-screens {
+		@media (max-width: $width-medium) {
+			@content;
+		}
+	}
+	@else if $width == small-screens {
+		@media (max-width: $width-small) {
+			@content;
+		}
+	}
+	@else {
+		@media (max-width: $width) {
+			@content;
+		}
+	}
+}

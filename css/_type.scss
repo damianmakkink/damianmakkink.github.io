@@ -1,0 +1,43 @@
+@import '_vars.scss';
+@import '_mixins.scss';
+
+h1 {
+	font: {
+		family: $fontHeading;
+		size: 5rem;
+		weight: 600;
+	}
+	color: $colorLinen;
+	@include responsive(480px) {
+		font-size: 3.75rem;
+	}
+}
+h2 {
+	font-family: $fontHeading;
+	color: $colorLinen;
+	&.title {
+		font: {
+			size: 4rem;
+			weight: 600;
+		}
+		margin-bottom: -38px;
+		position: relative;
+		z-index: 1;
+		@include responsive(480px) {
+			font-size: 3.5rem;
+			margin-bottom: -34px;
+		}
+		@include responsive(small-screens) {
+			font-size: 2.75rem;
+			margin-bottom: -25px;
+		}
+		span {
+			color: $colorSlateGray;
+		}
+	}
+}
+h3 {
+	font-family: $fontHeading;
+	color: $colorGold;
+	margin-bottom: 1rem;
+}
