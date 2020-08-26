@@ -1,5 +1,5 @@
 AuthName "Beveiligd gedeelte"
-AuthUserFile /.htpasswd
+AuthUserFile .htpasswd
 AuthGroupFile /dev/null
 AuthType Basic
 
