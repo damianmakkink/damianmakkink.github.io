@@ -1,0 +1,15 @@
+html {
+    height: 100vh;
+  }
+  
+  body {
+    height: 10000px;
+    background: #000;
+    overflow-y: hidden;
+  }
+  
+  canvas {
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
