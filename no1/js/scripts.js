@@ -12,7 +12,7 @@ function video1() {
     );
 
     const images = []
-    const airpods = {
+    const bike = {
         frame: 0
     };
 
@@ -22,13 +22,13 @@ function video1() {
         images.push(img);
     }
 
-    gsap.to(airpods, {
+    gsap.to(bike, {
         frame: frameCount - 1,
         snap: "frame",
         scrollTrigger: {
             scrub: 0.5,
             trigger: "#hero-1",
-            start: "top top",
+            start: "bottom bottom",
             end: "+=5000",
             scrub: 1,
             pin: true
@@ -40,7 +40,7 @@ function video1() {
 
     function render() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(images[airpods.frame], 0, 0); 
+        context.drawImage(images[bike.frame], 0, 0); 
     }
 }
 
@@ -58,7 +58,7 @@ function video2() {
     );
 
     const images = []
-    const airpods = {
+    const bike = {
         frame: 0
     };
 
@@ -68,7 +68,7 @@ function video2() {
         images.push(img);
     }
 
-    gsap.to(airpods, {
+    gsap.to(bike, {
         frame: frameCount - 1,
         snap: "frame",
         scrollTrigger: {
@@ -86,7 +86,7 @@ function video2() {
 
     function render() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(images[airpods.frame], 0, 0); 
+        context.drawImage(images[bike.frame], 0, 0); 
     }
 }
 
