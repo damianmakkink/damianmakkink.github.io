@@ -1,6 +1,0 @@
-AuthName "Beveiligd gedeelte"
-AuthUserFile .htpasswd
-AuthGroupFile /dev/null
-AuthType Basic
-
-require valid-user
