@@ -1,15 +1,36 @@
 html {
     height: 100vh;
-  }
-  
-  body {
-    height: 10000px;
+}
+
+body {
+    height: 12000px;
     background: #000;
     overflow-y: hidden;
-  }
-  
-  canvas {
+}
+
+canvas {
     position: relative;
     max-width: 100vw;
     max-height: 100vh;
-  }
+}
+img {
+    width: 100%;
+}
+.columns {
+    padding-top: 500px;
+    padding-bottom: 500px;
+}
+
+.title,
+.subtitle {
+  color: #fff;
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
